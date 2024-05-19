@@ -28,19 +28,14 @@ namespace IMDBWebService.Controllers
                     Rating= movie.Rating,
                     Budget=movie.Budget,
                 };
-                m.MovieActors = new List<MovieActor>();
-                
-                foreach (ActorDTO a in movie.Actors) 
+                foreach(ActorDTO actor in movie.Actors)
                 {
-                    m.MovieActors.Add(new MovieActor
+                    m.Actors.Add(new Actor
                     {
-                        Actor = new Actor
-                        {
-                            FirstName=a.FirstName,
-                            LastName=a.LastName,
-                            MiddleName = a.MiddleName,
-                            Age=a.Age,
-                        }
+                        FirstName=actor.FirstName,
+                        LastName=actor.LastName,
+                        MiddleName=actor.MiddleName,
+                        Age=  actor.Age
                     });
                 }
                 context.Movies.Add(m);

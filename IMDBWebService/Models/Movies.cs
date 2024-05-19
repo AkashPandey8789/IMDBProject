@@ -18,7 +18,7 @@ namespace IMDBWebService.Models
         [Required]
         public int Budget { get; set; }
 
-        public ICollection<MovieActor> MovieActors { get; set; }
+        public ICollection<Actor> Actors { get; set; }
 
     }
 }

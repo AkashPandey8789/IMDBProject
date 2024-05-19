@@ -12,6 +12,6 @@ namespace IMDBWebService.Models
         public string LastName { get; set; }
         public int Age { get; set; }
 
-        public ICollection<MovieActor> MovieActors { get; set; }
+        public ICollection<Movies> Movies { get; set; }
     }
 }
